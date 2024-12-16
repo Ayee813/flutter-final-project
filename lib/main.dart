@@ -119,8 +119,14 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('I have Pc'),
-        backgroundColor: Color(0xff0077B6),
+        title: Text('I have Pc'),
+        backgroundColor: Color(
+          0xff0077B6,
+        ),
+                leading: SizedBox(
+          width: 10,
+          child: Image.asset("assets/img/ihavepcLogo.png"),
+        ),
       ),
       body: _pages[_currentIndex],
       bottomNavigationBar: BottomNavigationBar(
@@ -130,23 +136,40 @@ class _MainPageState extends State<MainPage> {
             _currentIndex = index;
           });
         },
-      
         selectedItemColor: Colors.white,
         unselectedItemColor: Colors.white70,
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home,), label: 'Home', backgroundColor: Color(0xff0077B6)),
-          BottomNavigationBarItem(icon: Icon(Icons.desktop_mac), label: 'Computer Set' ,backgroundColor: Color(0xff0077B6)),
-          BottomNavigationBarItem(icon: Icon(Icons.build), label: 'Build Your PC', backgroundColor: Color(0xff0077B6)),
-          BottomNavigationBarItem(icon: Icon(Icons.laptop), label: 'Notebook', backgroundColor: Color(0xff0077B6)),
-          BottomNavigationBarItem(icon: Icon(Icons.info), label: 'About Us', backgroundColor: Color(0xff0077B6)),
-          BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: 'Cart', backgroundColor: Color(0xff0077B6)),
+          BottomNavigationBarItem(
+              icon: Icon(
+                Icons.home,
+              ),
+              label: 'Home',
+              backgroundColor: Color(0xff0077B6)),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.desktop_mac),
+              label: 'Computer Set',
+              backgroundColor: Color(0xff0077B6)),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.build),
+              label: 'Build Your PC',
+              backgroundColor: Color(0xff0077B6)),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.laptop),
+              label: 'Notebook',
+              backgroundColor: Color(0xff0077B6)),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.info),
+              label: 'About Us',
+              backgroundColor: Color(0xff0077B6)),
+          BottomNavigationBarItem(
+              icon: Icon(Icons.shopping_cart),
+              label: 'Cart',
+              backgroundColor: Color(0xff0077B6)),
         ],
       ),
     );
   }
 }
-
-
 
 class ComputerSetPage extends StatelessWidget {
   @override
